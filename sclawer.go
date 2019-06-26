@@ -7,6 +7,7 @@ import (
 	"io/ioutil"
 	"log"
 	"net/http"
+	"os"
 	"path"
 	"regexp"
 	"strconv"
@@ -14,7 +15,8 @@ import (
 )
 
 var (
-	HtmlTemplate_Folder string = "./template"
+	HtmlTemplate_Folder string = "template"
+	CurrentPath, _             = os.Getwd()
 )
 
 type MyRoute struct {
@@ -57,9 +59,9 @@ func (mr *MyRoute) ServeHTTP(w http.ResponseWriter, r *http.Request) {
 		}
 	} else if match, _ := regexp.MatchString("index", r.URL.Path); match {
 		if r.Method == "GET" {
-			fmt.Println("-----------get", r.Form)
+			//fmt.Println("-----------get", r.Form)
 			//sayhelloName(w, r)
-			t, err := template.ParseFiles(path.Join(HtmlTemplate_Folder, "listitem.gtpl"))
+			t, err := template.ParseFiles(path.Join(CurrentPath, HtmlTemplate_Folder, "listitem.gtpl"))
 			//t, err := template.ParseFiles(path.Join(HtmlTemplate_Folder, "index.html"))
 			if err != nil {
 				log.Println(err)
