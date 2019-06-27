@@ -142,7 +142,7 @@ iframe {
 
 .container-table100 {
   width: 100%;
-  min-height: 100vh;
+  min-height: 10vh;
   background: #fff;
 
   display: -webkit-box;
@@ -529,7 +529,7 @@ th, td {
 
 /*-----------------form---------------------------*/
 .form-style-5{
-	max-width: 500px;
+	max-width: 1000px;
 	padding: 10px 20px;
 	background: #f4f7f8;
 	margin: 10px auto;
@@ -546,7 +546,7 @@ th, td {
 	margin-bottom: 10px;
 }
 .form-style-5 label {
-	display: block;
+	/*display: block;*/
 	margin-bottom: 8px;
 }
 .form-style-5 input[type="text"],
@@ -567,7 +567,7 @@ th, td {
 	margin: 0;
 	outline: 0;
 	padding: 10px;
-	width: 100%;
+	width: 25%;
 	box-sizing: border-box; 
 	-webkit-box-sizing: border-box;
 	-moz-box-sizing: border-box; 
@@ -598,7 +598,8 @@ th, td {
 	color: #fff;
 	height: 30px;
 	width: 30px;
-	display: inline-block;
+	/*display: inline-block;*/
+	float:left;
 	font-size: 0.8em;
 	margin-right: 4px;
 	line-height: 30px;
@@ -611,15 +612,17 @@ th, td {
 .form-style-5 input[type="button"]
 {
 	position: relative;
-	display: block;
-	padding: 19px 39px 18px 39px;
+	/*display: block;*/
+	/*padding: 19px 39px 18px 39px;*/
+	float:right;
+	padding: 10px;
 	color: #FFF;
 	margin: 0 auto;
 	background: #1abc9c;
 	font-size: 18px;
 	text-align: center;
 	font-style: normal;
-	width: 100%;
+	width: 20%;
 	border: 1px solid #16a085;
 	border-width: 1px 1px 3px;
 	margin-bottom: 10px;

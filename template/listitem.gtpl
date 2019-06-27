@@ -25,21 +25,14 @@
 <div class="form-style-5">
 <form action="/index" method="post">
 <fieldset>
-<legend><span class="number">1</span> Searching Options</legend>
-<input type="text" name="pagecount" placeholder="Page Count *">
-<input type="text" name="commentcount" placeholder="Comments Count *">
-<input type="text" name="votecount" placeholder="Vote *">    
+<legend><span class="number"></span> Searching Options</legend>
+<input style="display: inline;" type="text" name="pagecount" placeholder="Page Count *">
+<input style="display: inline;" type="text" name="commentcount" placeholder="Comments Count *">
+<input style="display: inline;" type="text" name="votecount" placeholder="Vote *">    
+<input style="display: inline;" type="submit" value="Apply" />
 </fieldset>
-<input type="submit" value="Apply" />
 </form>
 </div>
-<!--form action="/index" method="post">
-	Page Count:<input type="text" name="pagecount">
-	Comment Count:<input type="text" name="commentcount">
-	Vote Count:<input type="text" name="votecount">
-	<input type="submit" value="Fetch">
-</form-->
-
 	<div class="limiter">
 		<div class="container-table100">
 			<div class="wrap-table100">
@@ -66,12 +59,12 @@
 							<tbody>
 								{{range $.itemlist}}
 								<tr class="row100 body">
-									<td class="cell100 column1"><a href="{{.CommentLink}}">{{.Title}}</a></td>
+									<td class="cell100 column1"><a href="{{.Link}}">{{.Title}}</a></td>
 									<td class="cell100 column3">{{.Price}}</td>
 									<td class="cell100 column5">{{.Vote}}</td>
 									<td class="cell100 column5">{{.Unvote}}</td>
 									<td class="cell100 column5">{{.Vendor}}</td>
-									<td class="cell100 column5">{{.CommentCont}}</td>
+									<td class="cell100 column5"><a href="{{.CommentLink}}">{{.CommentCont}}</td>
 									<td class="cell100 column3">{{.DataTime}}</td>
 								</tr>
 								{{end}}
