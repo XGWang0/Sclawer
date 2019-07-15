@@ -59,7 +59,7 @@ func HandleItemPage(li *goquery.Selection, smzdm *SMZDM, commentcnt, votecnt int
 			os.Exit(1)
 		}
 		divSel := SMZDMItemDoc.Find("div[class=title-box]")
-		itemTitle = divSel.Find("div[class=title\\ J_title]").Text()
+		itemTitle = divSel.Find("[class=title\\ J_title]").Text()
 		itemPrice = divSel.Find("span").Text()
 		//fmt.Println("Title, Price", itemTitle, itemPrice)
 
